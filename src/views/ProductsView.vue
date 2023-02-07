@@ -116,7 +116,7 @@
             <button class="btn btn-light">Add to cart</button>
         </div>
         </div>
-    
+
         <div class="card">
         <div class="card-title">
             Carrots
