@@ -60,14 +60,12 @@
 import food from '../food.json'
 
 export default {
-  name: 'Home',
-  data() {
+  name: 'HomeView',
+  data () {
     return {
       inventory: food
     }
   },
-  components: {
-    
-  }
+  components: {}
 }
 </script>
