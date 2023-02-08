@@ -17,8 +17,10 @@
       <span>Cart ({{ totalQuantity }})</span>
     </div>
   </header>
-  <router-view :inventory="inventory" />
+  <!-- inventory and addToCart are data and methods that are being bound to variables to be passed as props to views pages  -->
+  <router-view :inventory="inventory" :addToCart="addToCart" />
 
+  <!-- toggle, cart,  etc. are data and methods being bound to variables to be passed as props to SidebarView -->
   <SidebarView
     v-if="showSidebar"
     :toggle="toggleSidebar"
