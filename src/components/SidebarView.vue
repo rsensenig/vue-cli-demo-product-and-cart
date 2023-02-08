@@ -48,21 +48,21 @@
 </template>
 
 <script>
-  export default {
-    props: ['toggle', 'cart', 'inventory', 'remove'],
-    methods: {
-      getPrice(name) {
-        const product = this.inventory.find((p) => {
-          return  p.name === name;
-        })
-        return product.price.USD;
-      },
-      calculateTotal() {
-        const total = Object.entries(this.cart).reduce((accumulator, current, index) => {
-          return accumulator + (current[1] * this.getPrice(current[0]));
-        }, 0)
-        return total.toFixed(2);
-      }
+export default {
+  props: ['toggle', 'cart', 'inventory', 'remove'],
+  methods: {
+    getPrice (name) {
+      const product = this.inventory.find((p) => {
+        return p.name === name
+      })
+      return product.price.USD
+    },
+    calculateTotal () {
+      const total = Object.entries(this.cart).reduce((accumulator, current, index) => {
+        return accumulator + (current[1] * this.getPrice(current[0]))
+      }, 0)
+      return total.toFixed(2)
     }
   }
+}
 </script>
