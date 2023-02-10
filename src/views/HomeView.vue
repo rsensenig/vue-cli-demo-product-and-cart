@@ -12,7 +12,7 @@
 
       <div class="recommended">
 
-        <ProductCard 
+        <ProductCard
           v-for="(product, index) in inventory.slice(0, 3)"
           :key="product.id"
           class="card"

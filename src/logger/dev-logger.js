@@ -1,24 +1,23 @@
-const { format, createLogger, transports } = require('winston');
-const { timestamp, combine, printf, colorize, errors } = format;
+const { format, createLogger, transports } = require('winston')
+const { timestamp, combine, printf, colorize, errors } = format
 
 const logFormat = printf(({ level, message, label, timestamp, stack }) => {
-  return `${timestamp} ${level}: ${stack || message}`;
-});
+  return `${timestamp} ${level}: ${stack || message}`
+})
 
-function buildDevLogger() {
+function buildDevLogger () {
   return createLogger({
     format: combine(
       colorize(),
       timestamp({
         format: 'YYYY-MM-DD HH:mm:ss'
       }),
-      errors({stack: true}),
+      errors({ stack: true }),
       logFormat
     ),
     defaultMeta: { service: 'user-service' },
-    transports: [new transports.Console()],
-  });
+    transports: [new transports.Console()]
+  })
 }
 
-
-module.exports = buildDevLogger;
+module.exports = buildDevLogger
