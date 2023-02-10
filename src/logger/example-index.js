@@ -1,6 +1,6 @@
-const logger = require('./logger');
+const logger = require('./example-logger');
 
-logger.info('text info');
+logger.info('text info', {meta1: 'meta1'});
 logger.warn('text warn');
 logger.error('text error');
 // logger.debug('text debug');

@@ -3,8 +3,8 @@ const { format, createLogger, transports } = require('winston');
 // destructuring here means don't have to do format.timestamp, format.combine, format.printf, etc. below
 const { timestamp, combine, printf, colorize, errors } = format;
 
-// custom format:
-const logFormat = printf(({ level, message, timestamp, stack }) => {
+  // custom format:
+const logFormat = printf(({ level, message, label, timestamp, stack }) => {
   return `${timestamp} ${level}: ${stack || message}`;
 });
 
