@@ -1,4 +1,4 @@
-const logger = require('./logger/logger');
+const logger = require('./logger');
 
 logger.info('text info');
 logger.warn('text warn');
