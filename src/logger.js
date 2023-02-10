@@ -11,6 +11,7 @@ const logger = createLogger({
   // default log level is set to info
   // level: 'debug',
   format: combine(
+    format.colorize(),
     timestamp({
       format: 'YYYY-MM-DD HH:mm:ss'
     }),
