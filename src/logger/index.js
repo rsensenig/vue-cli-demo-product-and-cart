@@ -1,7 +1,7 @@
 // const logger = require('./example-logger')
 const logger = require('./logger')
 
-logger.info('text info', { meta1: 'meta1' })
+logger.info('text info', { meta: 1 })
 logger.warn('text warn')
 logger.error('text error')
 // logger.debug('text debug');
